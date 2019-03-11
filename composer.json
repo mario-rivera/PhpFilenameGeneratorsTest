@@ -1,0 +1,10 @@
+{
+    "autoload": {
+		"psr-4": {
+            "PlaceholderX\\": "src/"
+		}
+	},
+    "require": {
+        "nubs/random-name-generator": "^2.1"
+    }
+}

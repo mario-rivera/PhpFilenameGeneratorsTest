@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+  
+  php:
+    image: php:7.1-cli
+    working_dir: /code
+    volumes:
+      - .:/code
+    networks: 
+      - default
+    command: php index.php
+
+  composer:
+    image: composer:1.6
+    working_dir: /code
+    volumes:
+      - .:/code
+    command: composer install -n --ignore-platform-reqs --no-scripts
+
+networks:
+  default:
+    name: ${DOCKER_DEFAULT_NETWORK}
